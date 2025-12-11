@@ -237,11 +237,17 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
-// Start server
-const PORT = process.env.PORT || 5001;
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Start server only if not in Vercel/serverless environment
+// Vercel sets VERCEL env variable, and in serverless we don't need to listen
+if (!process.env.VERCEL && process.env.VERCEL_ENV !== 'production') {
+  const PORT = process.env.PORT || 5001;
+  server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
-// Export io for use in other files
-module.exports = { io, activeUsers }; 
+// Export app and server for Vercel
+module.exports = app;
+module.exports.io = io;
+module.exports.activeUsers = activeUsers;
+module.exports.server = server; 
