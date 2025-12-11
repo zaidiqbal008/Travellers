@@ -240,7 +240,7 @@ app.get('*', (req, res) => {
 // Start server only if not in Vercel/serverless environment
 // Vercel sets VERCEL env variable, and in serverless we don't need to listen
 if (!process.env.VERCEL && process.env.VERCEL_ENV !== 'production') {
-  const PORT = process.env.PORT || 5001;
+  const PORT = process.env.PORT || 5000;
   server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
