@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.517461ab.js",
+    "static/media/Main.png": "/static/media/Main.77f255359d432d5050bd.png",
+    "static/media/Sedan.png": "/static/media/Sedan.757fce2374f90da615a9.png",
+    "static/media/MiniVan.png": "/static/media/MiniVan.0be91934b7ca691f020a.png",
+    "static/media/SUV.png": "/static/media/SUV.9eabd712316ca5c690ab.png",
+    "static/media/logo.png": "/static/media/logo.e23ee8639bd954db58f4.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.517461ab.js.map": "/static/js/main.517461ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.517461ab.js"
+  ]
+}
